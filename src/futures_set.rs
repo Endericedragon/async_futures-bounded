@@ -1,6 +1,6 @@
-use std::future::Future;
-use std::task::{ready, Context, Poll};
-use std::time::Duration;
+use core::future::Future;
+use core::task::{ready, Context, Poll};
+use core::time::Duration;
 
 use futures_util::future::BoxFuture;
 

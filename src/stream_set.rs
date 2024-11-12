@@ -1,7 +1,7 @@
+use core::task::{ready, Context, Poll};
+use core::time::Duration;
 use futures_util::stream::BoxStream;
 use futures_util::Stream;
-use std::task::{ready, Context, Poll};
-use std::time::Duration;
 
 use crate::{PushError, StreamMap, Timeout};
 

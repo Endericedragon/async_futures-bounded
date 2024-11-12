@@ -1,7 +1,7 @@
-use std::collections::HashMap;
-use std::future::Future;
-use std::task::{ready, Context, Poll};
-use std::time::Duration;
+use core::future::Future;
+use core::task::{ready, Context, Poll};
+use core::time::Duration;
+use my_std::collections::HashMap;
 
 use futures_util::future::BoxFuture;
 

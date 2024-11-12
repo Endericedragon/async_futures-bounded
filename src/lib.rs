@@ -1,3 +1,6 @@
+#![no_std]
+#![feature(error_in_core)]
+
 mod futures_map;
 mod futures_set;
 mod futures_tuple_set;
@@ -10,9 +13,13 @@ pub use futures_tuple_set::FuturesTupleSet;
 pub use stream_map::StreamMap;
 pub use stream_set::StreamSet;
 
-use std::fmt;
-use std::fmt::Formatter;
-use std::time::Duration;
+use core::fmt;
+use core::fmt::Formatter;
+use core::time::Duration;
+
+// test purposes
+pub use futures_timer as async_futures_timer;
+pub use futures_util;
 
 /// A future failed to complete within the given timeout.
 #[derive(Debug)]
@@ -43,4 +50,4 @@ pub enum PushError<T> {
     Replaced(T),
 }
 
-impl std::error::Error for Timeout {}
+impl core::error::Error for Timeout {}

@@ -1,9 +1,9 @@
-use std::future::Future;
-use std::hash::Hash;
-use std::pin::Pin;
-use std::task::{Context, Poll, Waker};
-use std::time::Duration;
-use std::{future, mem};
+use core::future::Future;
+use core::hash::Hash;
+use core::pin::Pin;
+use core::task::{Context, Poll, Waker};
+use core::time::Duration;
+use core::{future, mem};
 
 use futures_timer::Delay;
 use futures_util::future::BoxFuture;

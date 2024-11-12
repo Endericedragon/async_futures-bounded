@@ -1,7 +1,7 @@
-use std::mem;
-use std::pin::Pin;
-use std::task::{Context, Poll, Waker};
-use std::time::Duration;
+use core::mem;
+use core::pin::Pin;
+use core::task::{Context, Poll, Waker};
+use core::time::Duration;
 
 use futures_timer::Delay;
 use futures_util::stream::{BoxStream, SelectAll};
