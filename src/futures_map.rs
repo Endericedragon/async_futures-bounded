@@ -177,11 +177,14 @@ where
 
 #[cfg(test)]
 mod tests {
+    use core::future::{pending, poll_fn, ready};
     use futures::channel::oneshot;
     use futures_util::task::noop_waker_ref;
-    use std::future::{pending, poll_fn, ready};
-    use std::pin::Pin;
-    use std::time::Instant;
+    // use std::future::{pending, poll_fn, ready};
+    use core::pin::Pin;
+    // use std::pin::Pin;
+    // use std::time::Instant;
+    use async_std::time::Instant;
 
     use super::*;
 
